@@ -6,8 +6,8 @@ Toggle Minecraft Hotbars - by SP4CEBAR
 HOW TO USE
 1. download AutoHotKey from https://www.autohotkey.com/, and install it
 2. download this program (the file that ends with ".ahk")
-3. open the program in AutoHotKey
-4. Open a Minecraft creative world
+3. open the program in AutoHotKey to run it
+4. open a Minecraft creative world to use it
 
 IN MINECRAFT
 press V to toggle between six of minecraft's hotbars (3 to 8)
@@ -23,4 +23,4 @@ TROUBLESHOOT
 - the hotbar doesn't work    -> press escape
 	- still doesn't work? -> 
 		- look in your Windows background apps, do you see an AHK icon?, if not start this program again
-  	- is your minecraft window called something with "Minecraft" in it?, if not replace "Minecraft" in the "#IfWinActive, Minecraft" in this program
+  		- is your minecraft window called something with "Minecraft" in it?, if not replace "Minecraft" in the "#IfWinActive, Minecraft" in this program
