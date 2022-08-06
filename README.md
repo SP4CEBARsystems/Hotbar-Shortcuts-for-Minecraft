@@ -8,10 +8,10 @@ HOW TO USE
 4. open a Minecraft creative world to use it
   
 IN MINECRAFT  
-press V to toggle between six of minecraft's hotbars (3 to 8)  
-press C to load a basic hotbar (9) and it'll select slot 1 (empty hand)  
-the script is disabled whenever you're not playing Minecraft or whenever you've pressed "t" or "/" to start typing  
-One exception: "e" (to open inventory) won't turn disable it, because that would ruin everything (the search tab in Minecraft's creative inventory behaves different to the other tabs, to make that work I would have to to detect if you clicked on search and everything would get really complicated and the reliability would suffer)  
+- press V to toggle between six of minecraft's hotbars (3 to 8)  
+- press C to load a basic hotbar (9) and it'll select slot 1 (empty hand)  
+- the script is disabled whenever you're not playing Minecraft or whenever you've pressed "t" or "/" to start typing  
+	- One exception: "e" (to open inventory) won't turn disable it, because that would ruin everything (the search tab in Minecraft's creative inventory behaves different to the other tabs, to make that work I would have to to detect if you clicked on search and everything would get really complicated and the reliability would suffer)  
   
 Any of the numbers can be changed in the source code (don't worry, they are labeled)  
 The source code is full of descriptions, so don't be afraid to look through it, or make modifications to suit your needs
