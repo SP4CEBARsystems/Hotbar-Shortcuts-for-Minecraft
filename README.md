@@ -18,9 +18,9 @@ The source code is full of descriptions, so don't be afraid to look through it, 
   
 TROUBLESHOOT  
 - I can't type properly in Minecraft  -> press "/" or "t"
-- I can't type properly outside of Minecraft  -> press "/" or "t"
+- I can't type properly outside of Minecraft  -> press "/" or "t" or close the program (go to your Windows background apps, right click on the AHK icon (a green and white "H"), "Exit")
 	- Your window/browser tab is probably something with "Minecraft" in it
 - the hotbar doesn't work    -> press escape
 	- still doesn't work? -> 
-		- look in your Windows background apps, do you see an AHK icon?, if not start this program again
+		- look in your Windows background apps, do you see an AHK icon (a green and white "H")?, if not start this program again
   		- is your minecraft window called something with "Minecraft" in it?, if not replace "Minecraft" in the "#IfWinActive, Minecraft" in this program
