@@ -17,7 +17,9 @@ Any of the numbers can be changed in the source code (don't worry, they are labe
 The source code is full of descriptions, so don't be afraid to look through it, or make modifications to suit your needs
   
 TROUBLESHOOT  
-- I can't type in Minecraft  -> press "/" or "t"
+- I can't type properly in Minecraft  -> press "/" or "t"
+- I can't type properly outside of Minecraft  -> press "/" or "t"
+	- Your window/browser tab is probably something with "Minecraft" in it
 - the hotbar doesn't work    -> press escape
 	- still doesn't work? -> 
 		- look in your Windows background apps, do you see an AHK icon?, if not start this program again
