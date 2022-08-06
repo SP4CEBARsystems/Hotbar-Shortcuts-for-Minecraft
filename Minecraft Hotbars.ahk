@@ -1,20 +1,14 @@
 ﻿;Toggle Minecraft Hotbars - by SP4CEBAR
-;
-;press V to toggle between five hotbars (4 to 8)
-;press C to load a basic hotbar (9) and select slot 1 (empty hand)
-;the script is disabled whenever you're not playing Minecraft or whenever you're typing
-;One exception: "e" (to open inventory) won't turn it off, because that would ruin everything (search mode behaves differently, to make that work I would have to to detect if you clicked on search and everything would get really complicated and the reliability would suffer)
 
-;troubleshoot:
-;- I can't type    -> press "/" or "t"
-;- it doesn't work -> press escape
-;  - still doesn't work? -> 
-;     look at the background apps, do you see an AHK icon?, if not open this program again
-;     is your minecraft window called something with "Minecraft" in it?
+;read the README.md on GitHub for more information
+;https://github.com/SP4CEBARsystems/Hotbar-Shortcuts-for-Minecraft
+
+
+
+
 
 
 ;these are standard AutoHotKey settings, you can just ignore them
-
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
@@ -22,11 +16,12 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 
 
-;this bit of code disables the program when you don't want it
+
+
+
+;this section of the code disables the program when you don't want it
 
 #IfWinActive, Minecraft       ;turn this hotkey off when you aren't playing Minecraft
-
-inventory := 0
 
 /::                           ;turn this hotkey off when you press "/" to chat
 Suspend, On
@@ -40,19 +35,6 @@ Send t
 Pause,On, 1
 Return
 
-;e::                           ;NOT Advised [turn this hotkey off when you press "e" to open inventory]
-;Suspend, On
-;inventory := 1
-;Send e
-;Pause,On, 1
-;Return
-
-;e::                           ;NOT SUPPORTED [toggle this hotkey off/on when you press "e" to open or close inventory]
-;Suspend
-;Send e
-;Pause,, 1
-;Return
-
 Esc::                         ;turn this hotkey on when you press "escape" to exit chat
 Suspend, Off
 Send {Esc}
@@ -63,8 +45,32 @@ Return
 
 
 
-; T H E   A C T U A L   C O D E
 
+;the following bit of code is disabled (commented out)
+
+;inventory := 0                ;initialization of the inventory variable
+
+;e::                           ;NOT SUPPORTED [turn the hotkey off when you press "e" to open inventory]
+;Suspend, On
+;inventory := 1
+;Send e
+;Pause,On, 1
+;Return
+
+;e::                           ;NOT SUPPORTED [toggle the hotkey off/on when you press "e" to open or close inventory]
+;Suspend
+;Send e
+;Pause,, 1
+;Return
+
+
+
+
+
+
+; T H E   A C T U A L   C O D E
+;                           settings|description of the line
+;                        --------------------------------------
 HotBar := 3                  ;FIRST |set the first hotbar to hotbar 4 (in Minecraft: x+4)
 
 v::                          ;KEY1  |if you press "v" on your keyboard (load next hotbar)
@@ -86,7 +92,7 @@ c::                          ;KEY2  |if you press "c" on your keyboard (load bas
 	SetKeyDelay -1,-1        ;      |
 	Send {Blind}{x Down}     ;MCKEY |the program will hold "x" down
 	HotBar--                 ;      |decrement the HotBar value (6 becomes 5, 5 becomes 4, etc.)
-	if (HotBar<3)            ;SMALL |if HotBar gets below the lowest value (which is 4 in my case)
+	if (HotBar<3)            ;SMALL |if HotBar gets below the lowest value (which is 3 in my case)
 		HotBar := 8          ;GREAT |then it's set to the highest value (which is 8 in my case)
 	SetKeyDelay -1,0         ;      |
 	Send 9                   ;BASIC |the program will type 9 to load hotbar 9 (basic hotbar)
@@ -103,7 +109,7 @@ return
 
 
 ; S E T T I N G S
-;if a description in the previous lines started with a word in capital letters, then there's something in that line (before the ";" and the word) which you can change (a hacker's settings page), to change it find the letter or number mentioned in the table below (either v,c,x,4,8,9,1) and replace it with a letter or number you want it to be
+;if a description in the previous lines started with a word in capital letters, then there's something in that line (before the ";" and the word) which you can change, to change it find the letter or number mentioned in the table below (either v,c,x,4,8,9,1) and replace it with a letter or number you want it to be
 ;these are the words in capital letters and what I mean with them:
 
 ;|word |type  |default|description
